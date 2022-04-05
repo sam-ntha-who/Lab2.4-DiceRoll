@@ -1,0 +1,37 @@
+
+import java.util.Scanner;
+
+public class DiceRoll {
+
+	public static void main(String[] args) {
+		String response;
+		System.out.println("Welcome to Grand Circus Casino!");
+		
+		do {
+		System.out.println("How many sides should each die have?");
+		Scanner sides = new Scanner(System.in);
+		int numSides = sides.nextInt(); 
+		System.out.println("Your dice each have " + numSides + " sides.");
+		// Random roll = new Random();
+		int roll1 = (int) (Math.random()*numSides +1);
+		int roll2 = (int) (Math.random()*numSides +1);
+		
+		// int roll2 = roll.nextInt(numSides + 1);
+		System.out.println("Roll 1: " + roll1);
+		System.out.println("Roll 2: " + roll2);
+			if ((roll1 == roll2) && roll1 !=1) {
+				System.out.println("You rolled doubles!");
+			} else if (roll1 + roll2 == 2) {
+				System.out.println("Snake eyes!");
+			}
+			
+		System.out.println("Would you like to roll again? Y/N");
+		Scanner rollAgain = new Scanner(System.in);
+		response = rollAgain.nextLine();
+		
+		} while (response.equalsIgnoreCase("Y")); 
+		
+	      
+
+}
+}

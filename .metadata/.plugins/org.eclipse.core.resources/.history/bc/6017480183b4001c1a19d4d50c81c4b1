@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class DiceRoll {
+
+	public static void main(String[] args) {
+
+		System.out.println("Welcome to Grand Circus Casino!");
+		System.out.println("How many sides should each die have?");
+		Scanner sides = new Scanner(System.in);
+
+	}
+
+}

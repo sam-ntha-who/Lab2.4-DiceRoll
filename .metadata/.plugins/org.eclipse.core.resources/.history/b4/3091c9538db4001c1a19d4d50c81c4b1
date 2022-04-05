@@ -1,0 +1,24 @@
+import java.util.Random;
+import java.util.Scanner;
+
+
+public class DiceRoll {
+
+	public static void main(String[] args) {
+
+		System.out.println("Welcome to Grand Circus Casino!");
+		System.out.println("How many sides should each die have?");
+		Scanner sides = new Scanner(System.in);
+		int numSides = sides.nextInt(); 
+		System.out.println("Your dice each have " + numSides + " sides.");
+		// Random roll = new Random();
+		int roll1 = Math.random(numSides + 1);
+		// int roll2 = roll.nextInt(numSides + 1);
+		System.out.println("Roll 1: " + roll1);
+		
+		
+	      
+
+}
+}
+	
