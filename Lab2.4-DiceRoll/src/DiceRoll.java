@@ -13,8 +13,8 @@ public class DiceRoll {
 		System.out.println("Your dice each have " + numSides + " sides.");
 		// random roll
 		do {
-			int roll1 = (int) (Math.random() * numSides + 1);
-			int roll2 = (int) (Math.random() * numSides + 1);
+			int roll1 = generateRandomDieRoll(numSides);
+			int roll2 = generateRandomDieRoll(numSides);
 			System.out.println("Roll 1: " + roll1);
 			System.out.println("Roll 2: " + roll2);
 			// fancy names for some outcomes
@@ -36,5 +36,10 @@ public class DiceRoll {
 		System.out.println("You can't win if you don't play!");
 		// just kidding get some help
 		System.out.println("Michigan's Problem Gambling Helpline: 1-800-270-7117");
+	}
+	public static int generateRandomDieRoll(int numSides) {
+		int randomRoll = (int) (Math.random() * numSides + 1);
+		
+		return randomRoll;
 	}
 }
